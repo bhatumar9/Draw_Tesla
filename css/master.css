@@ -1,0 +1,96 @@
+body
+{
+background-color: #000;
+}
+
+.cls-1
+{
+stroke: #fff;
+fill: #000;
+stroke-width: 7px;
+stroke-dasharray: 1390px;
+stroke-dashoffset: 1390px;
+}
+.cls-2
+{
+  animation: svgdraw 5s linear;
+  animation-fill-mode: forwards;
+}
+.st0,.st1
+{
+  stroke: olive;
+  fill: #000;
+  stroke-width: 7px;
+  stroke-dasharray: 2039px;
+  stroke-dashoffset: 2039px;
+}
+@keyframes svgdraw
+{
+  to
+  {
+    stroke-dashoffset: 0px;
+  }
+
+}
+.logo{
+  display: block;
+  margin: auto;
+}
+.logo path
+  {
+  stroke: #B71C1C;
+  fill: #000;
+  stroke-width: 1px;
+  stroke-dasharray: 300px;
+  stroke-dashoffset: 300px;
+  }
+  .hello
+  {
+    animation: svgdraw 15s linear;
+    animation-fill-mode: forwards;
+  }
+
+.container
+{
+  position: relative;
+}
+.car
+{
+display: none;
+position: absolute;
+left: 0;
+pointer-events: none;
+width: 80%;
+}
+.smodel
+{
+  width:80%;
+}
+
+h1,h2,h3{
+  color: white;
+}
+.container2,.text
+{
+  width: 50%;
+  float: left;
+  margin-top: 30px;
+}
+.tirerotate
+{
+  position: relative;
+  animation: rotate 2s linear 5s infinite;
+  animation-direction: alternate-reverse;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+        left: 0;
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        left: 1000px;
+
+    }
+}
