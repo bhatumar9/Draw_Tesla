@@ -1,0 +1,178 @@
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'GlyphaLTStd';
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd.eot');
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd.woff2') format('woff2'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.woff') format('woff'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.ttf') format('truetype'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.svg#GlyphaLTStd') format('svg'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GlyphaLTStd-Light';
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.eot');
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.woff2') format('woff2'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.woff') format('woff'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.ttf') format('truetype'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.svg#GlyphaLTStd-Light') format('svg'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../fonts/GlyphaLTStd/orbitron-black.otf');
+  src: url('../fonts/GlyphaLTStd/Glorbitron-black.otf') format('otf'),
+  font-weight: normal;
+  font-style: normal;
+}
+.road
+ {
+  background-image: url('../image/road.jpg');
+  background-repeat: repeat-y;
+  background-size: 100%;
+  width: 50%;
+  margin: auto;
+  height: 2000vh;
+
+}
+.road::after{
+
+position: absolute;
+top: 1894vh;
+content: '--FINISH--';
+color: #FFEB3B;
+font-size: 11vw;
+
+}
+.moving-car
+{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -300px;
+  transform-style: preserve-3d;
+  transition: transform .3s linear;
+  perspective: 2000px
+}
+.moving-car img
+{
+height: 500px
+
+}
+
+.speed-show{
+position: fixed;
+top: 325px;
+font-size: larger;
+font-family: 'Orbitron';
+padding: 0px 10px;
+color: red;
+z-index: 9999;
+left: 99px;
+
+}
+
+.acceleration-show{
+  position: fixed;
+  left: 17px;
+  top: 30px;
+  font-size: larger;
+  font-family: 'Orbitron';
+}
+.distance-show{
+  position: fixed;
+  left: 18px;
+  top: 100px;
+  font-size: larger;
+  font-family: 'Orbitron';
+}
+.distance-show::after{
+content:'  KMs';
+font-family: 'GlyphaLTStd';
+}
+.distance-show::before{
+  content: 'Distance:  ';
+  font-size: normal;
+  font-family: 'GlyphaLTStd';
+}
+.acceleration-show{
+  top: 50px;
+}
+.acceleration-show::before{
+  content:'Acceleration:  ';
+  font-size: normal;
+  font-family: 'GlyphaLTStd';
+}
+.acceleration-show::after{
+  content:'  m/s2';
+  font-family: 'GlyphaLTStd';
+}
+
+.top-tesla{
+  transform-origin: 50% 80%;
+  transform: rotate(0deg);
+  transition: all 20s linear;
+}
+.car-start button
+{
+  position: fixed;
+  top: 40px;
+  right:40px;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  color: #fff;
+  background-color: red;
+  border: 1px solid grey;
+  outline: none;
+  box-shadow: 0px 0px 8px 2px #a59f9f;
+  transition: all .2s ease-in;
+  transform: scale(1);
+}
+.car-start button:focus
+{
+box-shadow: none;
+transform: scale(.9);
+color: #FFEB3B;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.speed-needle{
+  position: fixed;
+  top: 159px;
+  left: 118px;
+  height: 110px;
+  transform: rotateZ(-139deg);
+  transform-origin: bottom;
+  transition: transform .5s linear;
+  z-index: 99
+}
+.speed-meter
+{
+  position: fixed;
+  top: 140px;
+  left: 2px;
+
+}
+.afterfinish
+{
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: -1000px;
+  left: 50%;
+  margin-left: -330px;
+}

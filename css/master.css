@@ -1,12 +1,54 @@
 body
 {
-background-color: #000;
+  background: rgba(0,0,0,.85);
+  margin: 0;
+  padding: 0;
+
 }
 
+@font-face {
+  font-family: 'GlyphaLTStd';
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd.eot');
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd.woff2') format('woff2'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.woff') format('woff'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.ttf') format('truetype'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.svg#GlyphaLTStd') format('svg'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GlyphaLTStd-Light';
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.eot');
+  src: url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.woff2') format('woff2'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.woff') format('woff'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.ttf') format('truetype'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.svg#GlyphaLTStd-Light') format('svg'),
+       url('../fonts/GlyphaLTStd/GlyphaLTStd-Light.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../fonts/GlyphaLTStd/orbitron-black.otf');
+  src: url('../fonts/GlyphaLTStd/Glorbitron-black.otf') format('otf'),
+  font-weight: normal;
+  font-style: normal;
+}
+.header
+{
+  background: red;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Orbitron';
+  font-size: 40px;
+}
 .cls-1
 {
 stroke: #fff;
-fill: #000;
+fill: transparent;
 stroke-width: 7px;
 stroke-dasharray: 1390px;
 stroke-dashoffset: 1390px;
@@ -18,9 +60,9 @@ stroke-dashoffset: 1390px;
 }
 .st0,.st1
 {
-  stroke: olive;
-  fill: #000;
-  stroke-width: 7px;
+  stroke: #B71C1C;
+  fill: transparent;
+  stroke-width: 11px;
   stroke-dasharray: 2039px;
   stroke-dashoffset: 2039px;
 }
@@ -38,8 +80,8 @@ stroke-dashoffset: 1390px;
 }
 .logo path
   {
-  stroke: #B71C1C;
-  fill: #000;
+  stroke: red;
+  fill: transparent;
   stroke-width: 1px;
   stroke-dasharray: 300px;
   stroke-dashoffset: 300px;
@@ -53,12 +95,13 @@ stroke-dashoffset: 1390px;
 .container
 {
   position: relative;
+  z-index: 999;
 }
 .car
 {
 display: none;
 position: absolute;
-left: 0;
+left: 1500px;
 pointer-events: none;
 width: 80%;
 }
@@ -69,6 +112,28 @@ width: 80%;
 
 h1,h2,h3{
   color: white;
+  font-family: 'GlyphaLTStd';
+  position: relative;
+  opacity: 0;
+  top: -500px;
+}
+.bigheading
+{
+
+
+}
+}
+h2
+{
+
+}
+.smallheading
+{
+
+}
+.scrollnotice
+{
+  color: yellow;
 }
 .container2,.text
 {
@@ -93,4 +158,67 @@ h1,h2,h3{
         left: 1000px;
 
     }
+}
+.nextpage
+{
+  display: block;
+  width: 150px;
+  text-align: center;
+  color: white;
+  padding: 5px 5px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'GlyphaLTStd-Light';
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid white;
+}
+.nextpage:focus{
+  transform: scale(0);
+  transition: all .2s ease-in-out;
+}
+.skewed1
+{
+  transform: skewY(10deg);
+  background: red;
+  height: 400px;
+  width: 100%;
+}
+.footer
+{
+  margin-top: 120px;
+  background: black;
+  height: 100px;
+  width: 100%;
+  color: yellow;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'GlyphaLTStd-Light';
+
+}
+.colorvariants{
+margin-top: 120px;
+border: 2px solid white;
+}
+.img1,.img2,.img3{
+  width: 30.33%;
+  position: relative;
+}
+.img1
+{
+  left: -500px;
+}
+.img3
+{
+  right: -500px;
+}
+.img2
+{
+  bottom: -500px;
+}
+.colorvariants img:hover
+{
+  transform: scale(1.2);
+  transition: all .3s ease-out;
 }
