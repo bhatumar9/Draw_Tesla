@@ -138,15 +138,28 @@ font-family: 'GlyphaLTStd';
   transition: all .2s ease-in;
   transform: scale(1);
 }
+.car-start button::before
+{
+  content: 'Click here to start the engine';
+  background: rgba(0,0,0,0.3);
+  color: white;
+  position: absolute;
+  left: -130px;
+  width: 120px;
+}
 .car-start button:focus
 {
 box-shadow: none;
 transform: scale(.9);
 color: #FFEB3B;
 }
+.car-start button:focus::before
+{
+  display: none;
+}
 .stop-scrolling {
   height: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .speed-needle{
