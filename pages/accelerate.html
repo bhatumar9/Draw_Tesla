@@ -7,8 +7,17 @@
     <script src="../js/jquery.min.js"></script>
     <script src= '../js/mousescrollspeed.js'></script>
     <script src="../js/jquery.scrollstop.min.js"></script>
+    <script type="text/javascript">
+ $(window).load(function(){
+  $(".loader").hide();
+  $('.body_wrapper').show();
+});
+</script>
   </head>
   <body class="stop-scrolling">
+    <div class="loader">
+      <img src="../image/spinner.gif" alt="">
+    </div>
     <div class="road">
     </div>
     <div class="moving-car">

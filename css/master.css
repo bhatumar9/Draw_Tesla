@@ -5,6 +5,15 @@ body
   padding: 0;
 
 }
+.loader {
+  height: 100vh; }
+  .loader img {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -75px;
+    margin-top: -75px; }
 
 @font-face {
   font-family: 'GlyphaLTStd';
