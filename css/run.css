@@ -3,7 +3,18 @@ body
   margin: 0;
   padding: 0;
 }
-
+.body_wrapper{
+  display: none;
+}
+.loader {
+  height: 100vh; }
+  .loader img {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -75px;
+    margin-top: -75px; }
 @font-face {
   font-family: 'GlyphaLTStd';
   src: url('../fonts/GlyphaLTStd/GlyphaLTStd.eot');
