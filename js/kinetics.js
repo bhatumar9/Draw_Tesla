@@ -34,7 +34,7 @@ $(document).ready(function(){
    $('.distance-show').text((distance2/100).toFixed(1));
    $('.acceleration-show').text((acceleration*2).toFixed(2));
  },100);
- if(distance2 > 11327)
+ if(distance2 > 12200)
  {
    $('.road,.speed-meter,.speed-needle,.speed-show,.distance-show,.acceleration-show,.car-start').fadeOut(200);
    $('body').css({'background-color': '#000'});
@@ -52,7 +52,7 @@ $(document).ready(function(){
      console.log(fulltime);
    },1000);
    $(window).on('scroll',function(){
-     if($(window).scrollTop() >= 11327){
+     if($(window).scrollTop() >= 12200){
        $('.afterfinish').text("Congratulation!! You completed your race in "+fulltime+" Seconds").animate({"bottom": "500px"},1000);
        console.log('hello');
        clearInterval(clock);
